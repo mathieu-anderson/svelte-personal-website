@@ -1,5 +1,6 @@
 <script>
   import Icons from "./Icons.svelte";
+  import Pill from "./Pill.svelte";
   import { onMount } from "svelte";
   import { fly, fade } from "svelte/transition";
   import { spring } from "svelte/motion";
@@ -49,19 +50,20 @@
     padding: 1em;
     border: 2px solid #333;
     box-shadow: 10px 15px 0px #333;
+    margin-right: 10px;
     margin-bottom: 2em;
   }
 
   .container {
     display: grid;
+    grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr;
+    grid-auto-rows: min-content;
+
     grid-template-areas:
-      ". header header header header header header ."
-      ". section-1 section-1 section-1 section-1 section-1 section-1 ."
-      ". section-2 section-2 section-2 section-2 section-2 section-2 ."
-      ". section-3 section-3 section-3 section-3 section-3 section-3 ."
-      ". section-4 section-4 section-4 section-4 section-4 section-4 .";
+      ". . header header header header . ."
+      ". section-1 section-1 section-1 section-3 section-3 section-3 ."
+      ". section-2 section-2 section-2 section-4 section-4 section-4 .";
   }
 
   header {
@@ -72,6 +74,11 @@
 
   h3 {
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.7em;
+    margin-bottom: 1em;
   }
 
   .section-1 {
@@ -84,6 +91,11 @@
 
   .section-3 {
     grid-area: section-3;
+  }
+
+  .pills {
+    display: flex;
+    flex-flow: row wrap;
   }
 
   .section-4 {
@@ -108,6 +120,17 @@
     background: transparent;
     cursor: pointer;
     font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 950px) {
+    .container {
+      grid-template-areas:
+        ". header header header header header header ."
+        ". section-1 section-1 section-1 section-1 section-1 section-1 ."
+        ". section-2 section-2 section-2 section-2 section-2 section-2 ."
+        ". section-3 section-3 section-3 section-3 section-3 section-3 ."
+        ". section-4 section-4 section-4 section-4 section-4 section-4 .";
+    }
   }
 </style>
 
@@ -141,20 +164,6 @@
           logical glue between API architects and database analysts -> Ux
           researcher, UI designer in cross functional teams.
         </p>
-        <p>here are some fun projects : project cards</p>
-      </section>
-
-      <section class="section-2" transition:fly={{ x: 30, delay: 40 }}>
-        <h3>Where I did it</h3>
-        <ul>
-          <li>Talon.One</li>
-          <li>WooRank</li>
-          <li>Dev Academy</li>
-        </ul>
-      </section>
-
-      <section class="section-3" transition:fly={{ x: 30, delay: 60 }}>
-        <h3>How I do it</h3>
         <p>
           JavaScript is my language of choice. My favourtie tool these days is
           React, but I love anything that allows to build UIs in a declarative
@@ -165,6 +174,61 @@
           I also come from a fullstack background, so I keep things interesting
           by learning Rust and Go on the side.
         </p>
+        <p>
+          And I love absurd little side-project that help me explore new tech!
+          project cards
+        </p>
+      </section>
+
+      <section class="section-2" transition:fly={{ x: 30, delay: 40 }}>
+        <h3>Where I did it</h3>
+        <ul>
+          <li>Talon.One</li>
+          - dynamic growth start-up (b2b promotion engine) - role: front-end
+          (React) -sophisticated tech around flexible tool to build and evaluate
+          ruser-defined rules fast - responsabilities : building new features,
+          maintaining - responsabilities : features and UI (geolocation,
+          collaboration with UX and UI designers), maintainance (tech debt),
+          build tools (webpack), mentoring (other devs)
+          <li>WooRank</li>
+          - close knit team in a mature start-up (b2c SEO service)- role :
+          fullstack javascript (Node + React) - microservices - continuous
+          delivery (multiple deploys a day not uncommon) - Main projects : -
+          maintenance and expansion of front-end codebase (implementation of a
+          maintainable CSS-in-JS solution, removing tech debt while upgrading to
+          React 15.6 (legacy lifecycle methods, legacy context API)) - building
+          a PDF generation feature (node backend / React front-end).
+          <li>Dev Academy</li>
+          -
+        </ul>
+      </section>
+
+      <section class="section-3" transition:fly={{ x: 30, delay: 60 }}>
+        <h3>How I get it done</h3>
+        Language
+        <div class="pills">
+          <Pill name="JavasScript" icon="ICON" color="51, 98%, 48%" />
+          <Pill name="TypeScript" icon="ICON" color="214, 51%, 33%" />
+        </div>
+        Front-end and build tools
+        <div class="pills">
+          <Pill name="React" icon="ICON" color="193, 95%, 68%" />
+          <Pill name="Vue" icon="ICON" color="155, 100%, 40%" />
+          <Pill name="Webpack" icon="ICON" color="126, 100%, 40%" />
+        </div>
+        Back-end
+        <div class="pills">
+          <Pill name="Node" icon="ICON" color="126, 100%, 40%" />
+          <Pill name="Postgresql" icon="ICON" color="126, 100%, 40%" />
+          <Pill name="MongoDB" icon="ICON" color="126, 100%, 40%" />
+        </div>
+        Collaboration and productivity
+        <div class="pills">
+          <Pill name="Node" icon="ICON" color="126, 100%, 40%" />
+          <Pill name="Git" icon="ICON" color="9, 86%, 57%" />
+          <Pill name="VSCode" icon="ICON" color="9, 86%, 57%" />
+          <Pill name="Slack" icon="ICON" color="9, 86%, 57%" />
+        </div>
       </section>
 
       <section class="section-4" transition:fly={{ x: 30, delay: 80 }}>
