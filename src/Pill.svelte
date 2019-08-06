@@ -3,7 +3,8 @@
   export let icon;
   export let color;
 
-  let backgroundColor = `${color.slice(0, 11)}95% `;
+  let backgroundColor = `${color.slice(0, color.length - 3)}98% `;
+  console.log(backgroundColor);
 </script>
 
 <style>
