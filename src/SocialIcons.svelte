@@ -1,23 +1,22 @@
 <script>
-  export let darkMode;
+  export let darkTheme;
 </script>
 
 <style>
   div {
     display: flex;
-    justify-content: center;
   }
   svg {
     height: 0.6em;
-    padding: 0.4em;
+    padding: 0.2em;
     fill: #333;
   }
-  .dark > a > svg {
+  .darkTheme > a > svg {
     fill: gainsboro;
   }
 </style>
 
-<div class={darkMode ? 'dark' : ''}>
+<div class:darkTheme>
   <a href="https://github.com/mathieu-anderson">
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>GitHub icon</title>

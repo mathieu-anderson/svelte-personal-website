@@ -2,11 +2,11 @@
   export let name;
   export let icon;
   export let color;
-  export let darkMode;
+  export let darkTheme;
 
-  $: boxColor = darkMode ? "0, 0%, 20%" : color;
-  $: fontColor = darkMode ? "0, 0%, 86%" : color;
-  $: backgroundColor = darkMode
+  $: boxColor = darkTheme ? "0, 0%, 20%" : color;
+  $: fontColor = darkTheme ? "0, 0%, 86%" : color;
+  $: backgroundColor = darkTheme
     ? "0, 0%, 0%"
     : `${color.slice(0, color.length - 3)}98% `;
 </script>
