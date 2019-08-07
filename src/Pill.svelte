@@ -4,7 +4,7 @@
   export let color;
   export let darkMode;
 
-  $: color = darkMode ? "0, 0%, 20%" : color;
+  $: boxColor = darkMode ? "0, 0%, 20%" : color;
   $: fontColor = darkMode ? "0, 0%, 86%" : color;
   $: backgroundColor = darkMode
     ? "0, 0%, 0%"
@@ -25,8 +25,8 @@
 </style>
 
 <div
-  style="border: 2px solid hsl({color}); background-color: hsl({backgroundColor});
-  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({color});">
+  style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
+  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});">
   <span class="icon">
     {@html icon}
   </span>
