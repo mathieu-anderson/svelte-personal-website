@@ -132,11 +132,11 @@
     .container {
       grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
       grid-template-areas:
-        ". header header header header header header header header ."
-        ". section-1 section-1 section-1 section-1 section-1 section-1 section-1 section-1 ."
-        ". section-3 section-3 section-3 section-3 section-3 section-3 section-3 section-3 ."
-        ". section-2 section-2 section-2 section-2 section-2 section-2 section-2 section-2 ."
-        ". section-4 section-4 section-4 section-4 section-4 section-4 section-4 section-4 .";
+        ". header header header header header header ."
+        ". section-1 section-1 section-1 section-1 section-1 section-1 ."
+        ". section-3 section-3 section-3 section-3 section-3 section-3 ."
+        ". section-2 section-2 section-2 section-2 section-2 section-2 ."
+        ". section-4 section-4 section-4 section-4 section-4 section-4 .";
     }
   }
 </style>
