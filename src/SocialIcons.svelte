@@ -8,7 +8,7 @@
     justify-content: center;
   }
   svg {
-    height: 0.5em;
+    height: 0.6em;
     padding: 0.4em;
     fill: #333;
   }

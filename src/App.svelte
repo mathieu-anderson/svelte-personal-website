@@ -41,9 +41,10 @@
 
   /* styles */
   header {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     text-align: center;
+    margin-right: 10px;
   }
 
   section {
@@ -59,7 +60,6 @@
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: min-content;
-
     grid-template-areas:
       ". . header header header header . ."
       ". section-1 section-1 section-1 section-3 section-3 section-3 ."
@@ -123,13 +123,18 @@
   }
 
   @media screen and (max-width: 950px) {
+    .darkMode-button {
+      display: none;
+    }
+
     .container {
+      grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
       grid-template-areas:
-        ". header header header header header header ."
-        ". section-1 section-1 section-1 section-1 section-1 section-1 ."
-        ". section-2 section-2 section-2 section-2 section-2 section-2 ."
-        ". section-3 section-3 section-3 section-3 section-3 section-3 ."
-        ". section-4 section-4 section-4 section-4 section-4 section-4 .";
+        ". header header header header header header header header ."
+        ". section-1 section-1 section-1 section-1 section-1 section-1 section-1 section-1 ."
+        ". section-2 section-2 section-2 section-2 section-2 section-2 section-2 section-2 ."
+        ". section-3 section-3 section-3 section-3 section-3 section-3 section-3 section-3 ."
+        ". section-4 section-4 section-4 section-4 section-4 section-4 section-4 section-4 .";
     }
   }
 </style>
@@ -153,7 +158,7 @@
         {/if}
       </div>
       <header transition:fly={{ x: 30 }}>
-        Hello, my name is Mathieu.
+        Mathieu is a web dev
         <SocialIcons {darkMode} />
       </header>
 
