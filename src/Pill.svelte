@@ -2,9 +2,13 @@
   export let name;
   export let icon;
   export let color;
+  export let darkMode;
 
-  let backgroundColor = `${color.slice(0, color.length - 3)}98% `;
-  console.log(backgroundColor);
+  $: color = darkMode ? "0, 0%, 20%" : color;
+  $: fontColor = darkMode ? "0, 0%, 86%" : color;
+  $: backgroundColor = darkMode
+    ? "0, 0%, 0%"
+    : `${color.slice(0, color.length - 3)}98% `;
 </script>
 
 <style>
@@ -16,12 +20,13 @@
   }
   .name {
     margin-left: 0.3em;
+    line-height: 1.1em;
   }
 </style>
 
 <div
   style="border: 2px solid hsl({color}); background-color: hsl({backgroundColor});
-  color: hsl({color}); box-shadow: 4px 6px 0px hsl({color});">
+  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({color});">
   <span class="icon">
     {@html icon}
   </span>
