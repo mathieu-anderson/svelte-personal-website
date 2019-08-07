@@ -17,6 +17,7 @@
     margin: 0.5em;
     display: flex;
     flex-flow: row nowrap;
+    cursor: default;
   }
   .name {
     margin-left: 0.3em;
@@ -26,7 +27,8 @@
 
 <div
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
-  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});">
+  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
+  title={name}>
   <span class="icon">
     {@html icon}
   </span>
