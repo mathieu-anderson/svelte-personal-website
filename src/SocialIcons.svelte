@@ -11,6 +11,10 @@
     padding: 0.2em;
     fill: #333;
   }
+  svg:hover {
+    transition: 300ms;
+    transform: scale(1.1);
+  }
   .darkTheme > a > svg {
     fill: gainsboro;
     transition: 300ms;

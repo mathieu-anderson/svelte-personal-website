@@ -17,9 +17,11 @@
     margin: 0.5em;
     display: flex;
     flex-flow: row nowrap;
-    cursor: default;
     transition: 150ms;
     height: 1.2em;
+  }
+  div:hover {
+    transform: scale(1.03);
   }
   .name {
     margin-left: 0.3em;
@@ -30,7 +32,7 @@
 <div
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
   color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
-  title={name}
+  title={name}>
   <span class="icon">
     {@html icon}
   </span>
