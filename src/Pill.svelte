@@ -18,6 +18,7 @@
     display: flex;
     flex-flow: row nowrap;
     cursor: default;
+    transition: 150ms;
   }
   .name {
     margin-left: 0.3em;

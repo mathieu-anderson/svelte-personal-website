@@ -13,6 +13,7 @@
   }
   .darkTheme > a > svg {
     fill: gainsboro;
+    transition: 300ms;
   }
 </style>
 
