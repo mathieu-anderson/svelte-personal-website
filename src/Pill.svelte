@@ -9,7 +9,7 @@
   $: scale = !showPillInfo;
   $: boxColor = darkTheme ? "0, 0%, 20%" : color;
   $: fontColor = darkTheme ? "0, 0%, 86%" : color;
-  $: infoFontColor = darkTheme ? "0, 0%, 86%" : "#333";
+  $: infoFontColor = darkTheme ? "0, 0%, 86%" : "0, 0%, 20%";
   $: backgroundColor = darkTheme
     ? "0, 0%, 0%"
     : `${color.slice(0, color.length - 3)}98% `;
@@ -37,6 +37,8 @@
 
   .pill-info {
     margin-left: 1em;
+    margin-bottom: 0.3em;
+
     color: #333;
   }
 </style>
