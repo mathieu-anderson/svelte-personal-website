@@ -8,7 +8,10 @@
   let visible = false;
   onMount(() => (visible = true));
 
-  $: darkTheme = false;
+  let hour = new Date(Date.now()).getHours();
+  let isNight = hour >= 19 && hour <= 7;
+
+  $: darkTheme = isNight;
   $: showPillInfo = {
     JavaScript: false,
     TypeScript: false,
@@ -46,6 +49,11 @@
     margin: 0;
     padding: 0;
     transition: 300ms;
+  }
+
+  :global(a) {
+    font-weight: bold;
+    color: #1488c6;
   }
 
   :global(ol, ul) {
@@ -535,6 +543,7 @@
         <ul class="blog-posts-list">
           <li class="blog-posts-list-item">
             <a
+              style={darkTheme ? `color: hsl(201, 82%, 40%)` : ''}
               href="https://itnext.io/using-reacts-context-api-to-provide-a-localization-toolbox-for-your-components-48915f04bb54">
               Using React’s context API to provide a localization toolbox for
               your components
