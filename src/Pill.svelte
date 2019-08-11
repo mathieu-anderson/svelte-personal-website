@@ -9,7 +9,7 @@
   $: scale = !showPillInfo;
   $: boxColor = darkTheme ? "0, 0%, 20%" : color;
   $: fontColor = darkTheme ? "0, 0%, 86%" : color;
-  $: infoFontColor = darkTheme ? "0, 0%, 86%" : "0, 0%, 20%";
+  $: infoFontColor = darkTheme ? "0, 0%, 86%" : "0, 0%, 30%";
   $: backgroundColor = darkTheme
     ? "0, 0%, 0%"
     : `${color.slice(0, color.length - 3)}98% `;
@@ -26,20 +26,20 @@
     height: auto;
     width: auto;
     font-weight: bold;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
   }
   .scale:hover {
     transform: scale(1.03);
   }
   .name {
     margin-left: 0.3em;
-    line-height: 1.1em;
+    line-height: 1em;
   }
 
   .pill-info {
-    margin-left: 1em;
-    margin-bottom: 0.3em;
-
-    color: #333;
+    font-weight: normal;
+    margin: 0 0.3em 0.3em 1em;
+    line-height: 1.1em;
   }
 </style>
 

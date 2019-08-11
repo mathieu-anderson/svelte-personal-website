@@ -25,10 +25,13 @@
 </script>
 
 <style>
+  /* Webfonts */
+  @import url("https://fonts.googleapis.com/css?family=Bitter:700&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
   /* CSS reset */
   :global(html) {
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
   }
 
   *,
@@ -38,9 +41,10 @@
   }
 
   :global(body, button, h1, h2, h3, h4, h5, h6, p, ol, ul) {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 1em;
     margin: 0;
     padding: 0;
-    font-weight: normal;
     transition: 300ms;
   }
 
@@ -53,9 +57,9 @@
     height: auto;
   }
 
-  /* styles */
+  /* Styles */
   section {
-    padding: 1em;
+    padding: 0 1em 0.7em 1em;
     border: 2px solid #333;
     box-shadow: 10px 15px 0px #333;
     margin-right: 10px;
@@ -82,18 +86,69 @@
   }
 
   h1 {
+    font-family: "Bitter", Helvetica, sans-serif;
     font-size: 1.5em;
-    font-weight: bold;
+  }
+
+  h1:hover {
+    cursor: default;
+    animation: flow 10s ease-in-out infinite;
+    background: linear-gradient(
+      to left,
+      #4a154b,
+      #ecd209,
+      #007acc,
+      #61dafb,
+      #4fc08d,
+      #8dd6f9,
+      #339933,
+      #1488c6,
+      #343434
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes flow {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
   }
 
   h3 {
+    font-family: "Bitter", Helvetica, sans-serif;
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
     border-bottom: 2px solid #333;
-    padding-bottom: 0.7em;
-    margin-bottom: 1em;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.5em;
     line-height: 1.5em;
+  }
+
+  p {
+    margin-bottom: 0.3em;
+  }
+
+  b {
+    font-size: 1.1em;
+  }
+
+  .blog-posts-list {
+    list-style: square;
+  }
+
+  .blog-posts-list-item {
+    margin-left: 1em;
+    padding: 0.5em 0;
   }
 
   .title-icons {
@@ -200,23 +255,24 @@
       <section class="section-1" transition:fly={{ x: 30, delay: 30 }}>
         <h3>What I do</h3>
         <p>
-          I am a web developer, specialized in the front-end. I love being the
-          logical glue between API architects and database analysts -> Ux
-          researcher, UI designer in cross functional teams.
+          I am a
+          <b>front-end</b>
+          specialist. I love being part of cross-functional teams and being the
+          <b>logical glue</b>
+          between the back-end devs and the designers.
         </p>
         <p>
-          JavaScript is my language of choice. My favourtie tool these days is
-          React, but I love anything that allows to build UIs in a declarative
-          way, like Vue or Svelte. Or whatever tool is consensual in the team I
-          am in!
+          My favourite tool is
+          <b>React</b>
+          , but I love anything that allows to build UIs in a
+          <b>declarative way</b>
+          . But I always adopt whatever is consensual in the team I am in!
         </p>
         <p>
-          I also come from a fullstack background, so I keep things interesting
-          by learning Rust and Go on the side.
-        </p>
-        <p>
-          And I love absurd little side-project that help me explore new tech!
-          project cards
+          I also come from a
+          <b>fullstack background</b>
+          , so I am am very familiar with Node. And I keep things interesting by
+          learning Rust and Go on the side!
         </p>
       </section>
 
@@ -245,6 +301,7 @@
 
       <section class="section-3" transition:fly={{ x: 30, delay: 60 }}>
         <h3>How I get it done</h3>
+        <!-- TODO : Show / Hide all behaviour
         <div class="pills">
           <div
             class="pill-container"
@@ -252,12 +309,14 @@
               (showPillInfo.JavaScript = !showPillInfo.JavaScript), (showPillInfo.TypeScript = !showPillInfo.TypeScript), (showPillInfo.React = !showPillInfo.React), (showPillInfo.Vue = !showPillInfo.Vue), (showPillInfo.Webpack = !showPillInfo.Webpack), (showPillInfo.Node = !showPillInfo.Node), (showPillInfo.Docker = !showPillInfo.Docker), (showPillInfo.Git = !showPillInfo.Git), (showPillInfo.CircleCi = !showPillInfo.CircleCi), (showPillInfo.VSCode = !showPillInfo.VSCode), (showPillInfo.Slack = !showPillInfo.Slack), (showPillInfo.JavaScript = !showPillInfo.JavaScript), (showPillInfo.JavaScript = !showPillInfo.JavaScript);
             }}>
             <Pill
-              name="Show / Hide all"
+              name={'Show all'}
               icon=""
               color="0, 0%, 0%"
               {darkTheme}
               pillInfo="" />
           </div>
+        </div> -->
+        <div class="pills">
           <div
             class="pill-container"
             on:click={() => {
@@ -469,12 +528,16 @@
 
       <section class="section-4" transition:fly={{ x: 30, delay: 110 }}>
         <h3>Writings</h3>
-        <ul>
-          <li>
+        <p>
+          I love sharing knowledge, insights and learning journeys through blog
+          posts and talks!
+        </p>
+        <ul class="blog-posts-list">
+          <li class="blog-posts-list-item">
             <a
               href="https://itnext.io/using-reacts-context-api-to-provide-a-localization-toolbox-for-your-components-48915f04bb54">
               Using React’s context API to provide a localization toolbox for
-              your components -
+              your components
             </a>
           </li>
         </ul>
@@ -482,8 +545,3 @@
     </div>
   </div>
 {/if}
-
-<!--
-	Ideas:
-	- on click of tech pill, a tooltip with a few words about it ?
- -->
