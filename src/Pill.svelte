@@ -7,6 +7,7 @@
   export let pillInfo;
 
   $: scale = !showPillInfo;
+  $: darkTheme = darkTheme;
   $: boxColor = darkTheme ? "0, 0%, 20%" : color;
   $: fontColor = darkTheme ? "0, 0%, 86%" : color;
   $: infoFontColor = darkTheme ? "0, 0%, 86%" : "0, 0%, 30%";
@@ -16,13 +17,15 @@
 </script>
 
 <style>
+  .darkTheme {
+    transition: 100ms;
+  }
   .pill {
     z-index: 1000;
     padding: 0.3em 0.3em 0.2em 0.3em;
     margin: 0.5em;
     display: flex;
     flex-flow: row nowrap;
-    transition: 150ms;
     height: auto;
     width: auto;
     font-weight: bold;
@@ -35,7 +38,6 @@
     margin-left: 0.3em;
     line-height: 1em;
   }
-
   .pill-info {
     font-weight: normal;
     margin: 0 0.3em 0.3em 1em;
@@ -46,6 +48,7 @@
 <div
   class="pill"
   class:scale
+  class:darkTheme
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
   color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
   title={name}>
