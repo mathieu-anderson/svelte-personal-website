@@ -5,6 +5,7 @@
   export let darkTheme;
   export let showPillInfo;
   export let pillInfo;
+  export let iconOnly;
 
   $: scale = !showPillInfo;
   $: darkTheme = darkTheme;
@@ -21,8 +22,7 @@
     transition: 100ms;
   }
   .pill {
-    z-index: 1000;
-    padding: 0.3em 0.3em 0.2em 0.3em;
+    padding: 0.3em;
     margin: 0.5em;
     display: flex;
     flex-flow: row nowrap;
@@ -43,22 +43,29 @@
     margin: 0 0.3em 0.3em 1em;
     line-height: 1.1em;
   }
+  .iconOnly-pill {
+    padding: 0.1em 0.2em 0.4em 0.2em;
+    margin: 0.3em 0.3em;
+    width: 0.8em;
+    height: 0.8em;
+  }
 </style>
 
 <div
-  class="pill"
+  class={iconOnly ? 'iconOnly-pill' : 'pill'}
   class:scale
   class:darkTheme
+  class:iconOnly
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
   color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
   title={name}>
-  <div class="icon">
-    {@html icon}
-  </div>
-  <div class="name">{name}</div>
-  <div class="pill-info" style="color: hsl({infoFontColor})">
-    {#if showPillInfo}
-      {@html pillInfo}
-    {/if}
-  </div>
+  {@html icon}
+  {#if !iconOnly}
+    <div class="name">{name}</div>
+    <div class="pill-info" style="color: hsl({infoFontColor})">
+      {#if showPillInfo}
+        {@html pillInfo}
+      {/if}
+    </div>
+  {/if}
 </div>
