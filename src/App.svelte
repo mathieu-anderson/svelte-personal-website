@@ -333,7 +333,7 @@
 {#if visible}
   <div class:darkTheme>
     <div class="container">
-      <header transition:fly={{ x: 30, delay: 50 }}>
+      <header transition:fly={{ x: 30, delay: 210 }}>
         <h1>Mathieu Anderson is a web dev</h1>
         <div class="title-icons">
           <SocialIcons {darkTheme} />
@@ -348,7 +348,7 @@
         </div>
       </header>
 
-      <section class="section-1" transition:fly={{ x: 30, delay: 80 }}>
+      <section class="section-1" transition:fly={{ x: 30, delay: 220 }}>
         <h3>What I do</h3>
         <p>
           I am a
@@ -365,14 +365,14 @@
           . And I always adopt whatever is consensual in the team!
         </p>
         <p>
-          I also come from a
+          I come from a
           <b>fullstack background</b>
-          , so I am familiar with back-end tech (Node and Go). And I keep things
-          interesting by learning Rust on the side!
+          , so I am familiar with back-end tech (Node, Go, SQL databases). And I
+          keep things interesting by learning Rust on the side!
         </p>
       </section>
 
-      <section class="section-2" transition:fly={{ x: 30, delay: 140 }}>
+      <section class="section-2" transition:fly={{ x: 30, delay: 300 }}>
         <h3>Where I did it</h3>
         <div class="job-box">
           <h4>
@@ -434,10 +434,10 @@
               user-defined rules safely and fast
             </li>
             <li class="list-item">
-              Responsabilities : developing features and UI (geolocation,
+              Responsibilities : developing features and UI (geolocation,
               collaboration with UX and UI designers), limiting tech debt (best
-              practices), optimizing build tools (divided build time by 2),
-              learning to mentor team members
+              practices), optimizing build tools and DX (cut build time in
+              half), learning to mentor team members
             </li>
           </ul>
         </div>
@@ -513,7 +513,7 @@
               deployment through containerized micro-services
             </li>
             <li class="list-item">
-              Responsabilities : developing new features (PDF generation,
+              Responsibilities : developing new features (PDF generation,
               Facebook API metrics gathering, mailing service), addressing
               maintenance issues (legacy PHP codebase)
             </li>
@@ -521,7 +521,7 @@
         </div>
       </section>
 
-      <section class="section-3" transition:fly={{ x: 30, delay: 110 }}>
+      <section class="section-3" transition:fly={{ x: 30, delay: 270 }}>
         <h3>How I get it done</h3>
         <!-- TODO : Show / Hide all behaviour
         <div class="pills">
@@ -571,7 +571,7 @@
               pillInfo={`<ul>
                   <li>1 years of experience</li>
                   <li>
-                    Love the productivity boost it brings to large projects and
+                    Love the productivity boost it brings to large and
                     complex projects.
                   </li>
                 </ul>`}
@@ -665,7 +665,7 @@
               pillInfo={`<ul>
                   <li>2 years of experience</li>
                   <li>
-                    Love the shortcuts it offers and how it enables writing more maintainable styles styles.
+                    Love the shortcuts it offers and how it enables writing more maintainable styles.
                   </li>
                 </ul>`}
               {darkTheme} />
@@ -701,7 +701,7 @@
               pillInfo={`<ul>
                   <li>2 years of experience</li>
                   <li>
-                    Love the package ecosystem and the ability to write JS / TS in the back-end for truly isomoprhic apps.
+                    Love the package ecosystem and the ability to write JS / TS in the back-end for truly isomorphic apps.
                   </li>
                 </ul>`}
               {darkTheme} />
@@ -798,7 +798,7 @@
               pillInfo={`<ul>
                   <li>3 years of experience</li>
                   <li>
-                    Love how simple it makes transparency and conversation in a team.
+                    Love how simple it makes transparency and communication in a team.
                   </li>
                 </ul>`}
               {darkTheme} />
@@ -806,7 +806,7 @@
         </div>
       </section>
 
-      <section class="section-4" transition:fly={{ x: 30, delay: 160 }}>
+      <section class="section-4" transition:fly={{ x: 30, delay: 320 }}>
         <h3>On the side</h3>
         <p>
           I love sharing knowledge, insights and learning journeys through blog

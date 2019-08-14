@@ -18,9 +18,6 @@
 </script>
 
 <style>
-  .darkTheme {
-    transition: 100ms;
-  }
   .pill {
     padding: 0.3em;
     margin: 0.5em;
@@ -30,8 +27,10 @@
     width: auto;
     font-weight: bold;
     font-family: "Lato", Helvetica, Arial, sans-serif;
+    transition: 100ms;
   }
   .scale:hover {
+    transition: 100ms;
     transform: scale(1.03);
   }
   .name {
@@ -48,6 +47,7 @@
     margin: 0.3em 0.3em;
     width: 0.8em;
     height: 0.8em;
+    transition: 100ms;
   }
 </style>
 
