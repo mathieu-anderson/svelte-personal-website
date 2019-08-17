@@ -382,7 +382,7 @@
         <h3>Where I did it</h3>
         <div class="job-box">
           <h4>
-            <a href="https://talon.one/">Talon.One</a>
+            <a title="Talon.one" href="https://talon.one/">Talon.One</a>
           </h4>
           <p class="job-box-dates">January 2019 - Now</p>
           <p class="job-box-role">Front-end developer</p>
@@ -449,7 +449,7 @@
         </div>
         <div class="job-box">
           <h4>
-            <a href="https://www.woorank.com/">WooRank</a>
+            <a title="WooRank" href="https://www.woorank.com/">WooRank</a>
           </h4>
           <p class="job-box-dates">July 2017 - December 2018</p>
           <p class="job-box-role">Fullstack developer</p>
@@ -823,6 +823,8 @@
         <ul class="list">
           <li class="list-item">
             <a
+              title="Using React’s context API to provide a localization toolbox
+              for your components"
               href="https://itnext.io/using-reacts-context-api-to-provide-a-localization-toolbox-for-your-components-48915f04bb54">
               Using React’s context API to provide a localization toolbox for
               your components
@@ -832,21 +834,28 @@
         <br />
         <p>
           I also love building little projects to learn new tech, or just to see
-          if I can !
+          if I can!
         </p>
         <ul class="list">
           <li class="list-item">
-            <a href="https://github.com/mathieu-anderson/js-equality-jackpot">
-              JS Equalities as a slots machine!
+            <a
+              title="JS Equalities as a slots machine"
+              href="https://github.com/mathieu-anderson/js-equality-jackpot">
+              JS Equalities as a slots machine
             </a>
           </li>
           <li class="list-item">
-            <a href="https://github.com/mathieu-anderson/tarot-reading">
+            <a
+              title="Tarot drawing made simple"
+              href="https://github.com/mathieu-anderson/tarot-reading">
               Tarot drawing made simple
             </a>
           </li>
           <li class="list-item">
-            <a href="https://github.com/mathieu-anderson/vegan-checker">
+            <a
+              title="A small app to check if a mysterious ingredient is actually
+              not vegan"
+              href="https://github.com/mathieu-anderson/vegan-checker">
               A small app to check if a mysterious ingredient is actually not
               vegan
             </a>

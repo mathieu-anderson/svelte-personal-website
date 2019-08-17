@@ -22,7 +22,7 @@
 </style>
 
 <div class:darkTheme>
-  <a href="https://github.com/mathieu-anderson">
+  <a title="GitHub" href="https://github.com/mathieu-anderson">
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>GitHub icon</title>
       <path
@@ -40,7 +40,7 @@
         12.297c0-6.627-5.373-12-12-12" />
     </svg>
   </a>
-  <a href="https://www.linkedin.com/in/mathieuanderson/">
+  <a title="LinkedIn" href="https://www.linkedin.com/in/mathieuanderson/">
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>LinkedIn icon</title>
       <path
@@ -54,7 +54,7 @@
         22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
     </svg>
   </a>
-  <a href="https://medium.com/@syllaband">
+  <a title="Medium" href="https://medium.com/@syllaband">
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>Medium icon</title>
       <path
@@ -66,7 +66,7 @@
         0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z" />
     </svg>
   </a>
-  <a href="https://twitter.com/syllaband">
+  <a title="Twitter" href="https://twitter.com/syllaband">
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <title>Twitter icon</title>
       <path
