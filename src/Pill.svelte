@@ -23,15 +23,13 @@
     margin: 0.5em;
     display: flex;
     flex-flow: row nowrap;
-    height: auto;
-    width: auto;
     font-weight: bold;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     transition: 100ms;
   }
   .scale:hover {
     transition: 100ms;
-    transform: scale(1.03);
+    transform: scale(1.1);
   }
   .name {
     margin-left: 0.3em;
@@ -41,6 +39,7 @@
     font-weight: normal;
     margin: 0 0.3em 0.3em 1em;
     line-height: 1.1em;
+    width: auto;
   }
   .iconOnly-pill {
     padding: 0.1em 0.2em 0.4em 0.2em;
@@ -59,13 +58,15 @@
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
   color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
   title={name}>
-  {@html icon}
+  <div style="height: 1em">
+    {@html icon}
+  </div>
   {#if !iconOnly}
     <div class="name">{name}</div>
-    <div class="pill-info" style="color: hsl({infoFontColor})">
-      {#if showPillInfo}
+    {#if showPillInfo}
+      <div class="pill-info" style="color: hsl({infoFontColor})">
         {@html pillInfo}
-      {/if}
-    </div>
+      </div>
+    {/if}
   {/if}
 </div>
