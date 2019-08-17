@@ -30,6 +30,7 @@
   .scale:hover {
     transition: 100ms;
     transform: scale(1.1);
+    transform-origin: 50% 50;
   }
   .name {
     margin-left: 0.3em;
