@@ -2,7 +2,7 @@
 
 A personal website with Svelte
 
-(matand.dev)[https://matand.dev/]
+[matand.dev](https://matand.dev/)
 
 # Why Svelte ?
 
