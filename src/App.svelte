@@ -241,6 +241,11 @@
     color: gainsboro;
   }
 
+  .darkTheme > div > div > section > div > button {
+    transition: 300ms;
+    color: gainsboro;
+  }
+
   .darkTheme > div > div > section > p {
     transition: 300ms;
     color: gainsboro;
@@ -258,19 +263,19 @@
   .darkTheme-button {
     background: transparent;
     cursor: pointer;
-    border: 0;
+    border: 2px solid #333;
+    box-shadow: 4px 6px 0px #333;
     font-size: 0.6em;
     padding: 0.1em 0.2em 0.3em 0.2em;
     color: transparent;
     height: 1em;
     width: 1em;
     overflow: hidden;
-    border-radius: 50%;
-    transition: 300ms;
+    transition: 100ms;
   }
 
   .darkTheme-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .darkTheme-button-light-color {
@@ -301,6 +306,28 @@
     font-weight: bold;
   }
 
+  .show-details-button-container {
+    text-align: center;
+  }
+
+  .show-details-button {
+    font-family: Lato;
+    padding: 0.3em;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #333;
+    margin-bottom: 1em;
+    cursor: pointer;
+    box-shadow: 4px 6px 0px #333;
+  }
+
+  .show-details-button:hover {
+    transition: 100ms;
+    transform: scale(1.05);
+    transform-origin: 50% 50;
+  }
+
   @media screen and (max-width: 1000px) {
     .container {
       grid-gap: 0;
@@ -308,7 +335,7 @@
       grid-template-areas:
         ". header header header header header header ."
         ". section-1 section-1 section-1 section-1 section-1 section-1 ."
-        ". section-2 section-2 section-2 section-2 section-2 section-2 ."
+        ". section-2 section-2 section-2 section-2 section-2 section-2 .";
     }
   }
 
@@ -518,8 +545,10 @@
       <div class="section-2">
         <section transition:fly={{ x: 30, delay: 270 }}>
           <h3>How I get it done</h3>
-          <div class="pills">
-            <button on:click={() => (showAllPillInfo = !showAllPillInfo)}>
+          <div class="show-details-button-container">
+            <button
+              on:click={() => (showAllPillInfo = !showAllPillInfo)}
+              class="show-details-button">
               {showAllPillInfo ? 'Hide all details' : 'Show all details'}
             </button>
           </div>

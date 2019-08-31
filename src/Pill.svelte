@@ -8,6 +8,7 @@
   export let iconOnly;
 
   $: scale = !showPillInfo;
+  $: showName = false;
   $: darkTheme = darkTheme;
   $: boxColor = darkTheme ? "0, 0%, 20%" : color;
   $: fontColor = darkTheme ? "0, 0%, 86%" : color;
@@ -48,19 +49,39 @@
     width: 0.8em;
     height: 0.8em;
     transition: 100ms;
+    cursor: pointer;
+  }
+  .showName {
+    padding: 0.3em;
+    font-size: 0.8em;
+    height: 1em;
+    width: auto;
+  }
+  .showName > div {
+    margin-left: 0;
   }
 </style>
 
 <div
+  on:click={() => {
+    if (iconOnly) {
+      showName = !showName;
+    }
+  }}
   class={iconOnly ? 'iconOnly-pill' : 'pill'}
   class:scale
   class:darkTheme
   class:iconOnly
+  class:showName
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
   color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
   title={name}>
   <div style="height: 1em">
-    {@html icon}
+    {#if showName}
+      <div class="name">{name}</div>
+    {:else}
+      {@html icon}
+    {/if}
   </div>
   {#if !iconOnly}
     <div class="name">{name}</div>
