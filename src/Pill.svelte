@@ -57,7 +57,7 @@
     height: 1em;
     width: auto;
   }
-  .showName > div {
+  .showName > div > div {
     margin-left: 0;
   }
 </style>
