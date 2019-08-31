@@ -14,21 +14,22 @@
   };
 
   $: darkTheme = getInitialTheme();
+  $: showAllPillInfo = false;
   $: showPillInfo = {
-    JavaScript: false,
-    TypeScript: false,
-    Sass: false,
-    CSS: false,
-    React: false,
-    Redux: false,
-    Vue: false,
-    Webpack: false,
-    Node: false,
-    Docker: false,
-    Git: false,
-    CircleCi: false,
-    VSCode: false,
-    Slack: false
+    JavaScript: showAllPillInfo || false,
+    TypeScript: showAllPillInfo || false,
+    Sass: showAllPillInfo || false,
+    CSS: showAllPillInfo || false,
+    React: showAllPillInfo || false,
+    Redux: showAllPillInfo || false,
+    Vue: showAllPillInfo || false,
+    Webpack: showAllPillInfo || false,
+    Node: showAllPillInfo || false,
+    Docker: showAllPillInfo || false,
+    Git: showAllPillInfo || false,
+    CircleCi: showAllPillInfo || false,
+    VSCode: showAllPillInfo || false,
+    Slack: showAllPillInfo || false
   };
 </script>
 
@@ -80,6 +81,7 @@
     box-shadow: 10px 15px 0px #333;
     margin-right: 10px;
     margin-bottom: 2em;
+    height: min-content;
   }
 
   .container {
@@ -284,17 +286,9 @@
   .darkTheme-button-light-color {
     text-shadow: 0 0 0 gainsboro;
   }
-  .darkTheme-button-light-color:focus {
-    outline: 0;
-    box-shadow: 0 0 10px 0px gainsboro;
-  }
 
   .darkTheme-button-dark-color {
     text-shadow: 0 0 0 #333;
-  }
-  .darkTheme-button-dark-color:focus {
-    outline: 0;
-    box-shadow: 0 0 10px 0px #333;
   }
 
   .job-box:not(:last-child) {
@@ -530,22 +524,16 @@
       </section>
 
       <section class="section-3" transition:fly={{ x: 30, delay: 270 }}>
-        <h3>How I get it done</h3>
-        <!-- TODO : Show / Hide all behaviour
+        <h3>
+          How I get it done
+        </h3>
         <div class="pills">
-          <div
-            class="pill-container"
-            on:click={() => {
-              (showPillInfo.JavaScript = !showPillInfo.JavaScript), (showPillInfo.TypeScript = !showPillInfo.TypeScript), (showPillInfo.React = !showPillInfo.React), (showPillInfo.Vue = !showPillInfo.Vue), (showPillInfo.Webpack = !showPillInfo.Webpack), (showPillInfo.Node = !showPillInfo.Node), (showPillInfo.Docker = !showPillInfo.Docker), (showPillInfo.Git = !showPillInfo.Git), (showPillInfo.CircleCi = !showPillInfo.CircleCi), (showPillInfo.VSCode = !showPillInfo.VSCode), (showPillInfo.Slack = !showPillInfo.Slack), (showPillInfo.JavaScript = !showPillInfo.JavaScript), (showPillInfo.JavaScript = !showPillInfo.JavaScript);
-            }}>
-            <Pill
-              name={'Show all'}
-              icon=""
-              color="0, 0%, 0%"
-              {darkTheme}
-              pillInfo="" />
-          </div>
-        </div> -->
+          <button
+            on:click={() => (showAllPillInfo = !showAllPillInfo)}
+          >
+            {showAllPillInfo ? 'Hide all details' : 'Show all details'}
+          </button>
+        </div>
         <div class="pills">
           <div
             class="pill-container"
@@ -623,24 +611,6 @@
                 </ul>`}
               {darkTheme} />
           </div>
-          <!-- <div
-            class="pill-container"
-            on:click={() => {
-              showPillInfo.Vue = !showPillInfo.Vue;
-            }}>
-            <Pill
-              name="Vue"
-              icon={`<svg role="img" viewBox="0 0 24 24" fill="#4FC08D" height="100%" xmlns="http://www.w3.org/2000/svg"><title>Vue.js icon</title><path d="M19.197 1.608l.003-.006h-4.425L12 6.4v.002l-2.772-4.8H4.803v.005H0l12 20.786L24 1.608"/></svg>`}
-              color="153, 47%, 53%"
-              showPillInfo={showPillInfo.Vue}
-              pillInfo={`<ul>
-                  <li>XXXXX y of experienceears</li>
-                  <li>
-                    Lorem ipsum this is sample text the hardest part of a personal website is the content
-                  </li>
-                </ul>`}
-              {darkTheme} />
-          </div> -->
           <div
             class="pill-container"
             on:click={() => {
