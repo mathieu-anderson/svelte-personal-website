@@ -266,10 +266,9 @@
     border: 2px solid #333;
     box-shadow: 4px 6px 0px #333;
     font-size: 0.6em;
-    padding: 0.1em 0.2em 0.3em 0.2em;
     color: transparent;
-    height: 1em;
-    width: 1em;
+    height: 1.3em;
+    width: 1.3em;
     overflow: hidden;
     transition: 100ms;
   }
