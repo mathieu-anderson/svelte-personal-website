@@ -582,7 +582,7 @@
                 color="204, 100%, 40%"
                 showPillInfo={showPillInfo.TypeScript}
                 pillInfo={`<ul>
-                  <li>1 years of experience</li>
+                  <li>1 year of experience</li>
                   <li>
                     Love the productivity boost it brings to large and
                     complex projects.
