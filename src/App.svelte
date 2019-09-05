@@ -817,6 +817,13 @@
                 your components
               </a>
             </li>
+            <li class="list-item">
+              <a
+                title="Types of TypeScript typings"
+                href="https://medium.com/@syllaband/types-of-typescript-typings-303539f3a57b">
+                Types of TypeScript typings
+              </a>
+            </li>
           </ul>
           <br />
           <p>
