@@ -264,17 +264,16 @@
     background: transparent;
     cursor: pointer;
     border: 2px solid #333;
-    box-shadow: 4px 6px 0px #333;
     font-size: 0.6em;
     color: transparent;
     height: 1.3em;
     width: 1.3em;
     overflow: hidden;
-    transition: 100ms;
+    transition: box-shadow 100ms linear;
   }
 
   .darkTheme-button:hover {
-    transform: scale(1.05);
+    box-shadow: 4px 6px 0px #333;
   }
 
   .darkTheme-button-light-color {
@@ -318,13 +317,12 @@
     border: 2px solid #333;
     margin-bottom: 1em;
     cursor: pointer;
-    box-shadow: 4px 6px 0px #333;
+    transition: box-shadow 100ms linear;
+    min-width: 7em;
   }
 
   .show-details-button:hover {
-    transition: 100ms;
-    transform: scale(1.05);
-    transform-origin: 50% 50;
+    box-shadow: 4px 6px 0px #333;
   }
 
   @media screen and (max-width: 1000px) {

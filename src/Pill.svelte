@@ -26,12 +26,10 @@
     flex-flow: row nowrap;
     font-weight: bold;
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    transition: 100ms;
+    transition: box-shadow 100ms linear;
   }
-  .scale:hover {
-    transition: 100ms;
-    transform: scale(1.1);
-    transform-origin: 50% 50;
+  .pill:hover {
+    box-shadow: 4px 6px 0px !important;
   }
   .name {
     margin-left: 0.3em;
@@ -48,9 +46,13 @@
     margin: 0.3em 0.3em;
     width: 0.8em;
     height: 0.8em;
-    transition: 100ms;
+    transition: box-shadow 100ms linear;
     cursor: pointer;
   }
+  .iconOnly-pill:hover {
+    box-shadow: 4px 6px 0px !important;
+  }
+
   .showName {
     padding: 0.3em;
     font-size: 0.8em;
@@ -69,12 +71,11 @@
     }
   }}
   class={iconOnly ? 'iconOnly-pill' : 'pill'}
-  class:scale
   class:darkTheme
   class:iconOnly
   class:showName
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
-  color: hsl({fontColor}); box-shadow: 4px 6px 0px hsl({boxColor});"
+  color: hsl({fontColor}); box-shadow: 0px 0px 0px hsl({boxColor});"
   title={name}>
   <div style="height: 1em">
     {#if showName}
