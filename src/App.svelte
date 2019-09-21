@@ -583,7 +583,7 @@
                 color="204, 100%, 40%"
                 showPillInfo={showPillInfo.TypeScript}
                 pillInfo={`<ul>
-                  <li>1 years of experience</li>
+                  <li>1 year of experience</li>
                   <li>
                     Love the productivity boost it brings to large and
                     complex projects.
@@ -816,6 +816,13 @@
                 href="https://itnext.io/using-reacts-context-api-to-provide-a-localization-toolbox-for-your-components-48915f04bb54">
                 Using React’s context API to provide a localization toolbox for
                 your components
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                title="Types of TypeScript typings"
+                href="https://medium.com/@syllaband/types-of-typescript-typings-303539f3a57b">
+                Types of TypeScript typings
               </a>
             </li>
           </ul>
