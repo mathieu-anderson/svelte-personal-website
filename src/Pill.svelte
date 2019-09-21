@@ -21,7 +21,7 @@
     if (darkTheme && !iconOnly) {
       return "pill pill-darkTheme";
     } else if (darkTheme && iconOnly) {
-      return "iconOnly iconOnly-darkTheme";
+      return "iconOnly-pill iconOnly-darkTheme";
     } else if (!darkTheme && !iconOnly) {
       return "pill";
     } else if (!darkTheme && iconOnly) {
