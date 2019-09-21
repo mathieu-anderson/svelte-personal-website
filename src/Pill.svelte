@@ -16,6 +16,18 @@
   $: backgroundColor = darkTheme
     ? "0, 0%, 0%"
     : `${color.slice(0, color.length - 3)}98% `;
+
+  const getClasses = (darkTheme, iconOnly) => {
+    if (darkTheme && !iconOnly) {
+      return "pill pill-darkTheme";
+    } else if (darkTheme && iconOnly) {
+      return "iconOnly iconOnly-darkTheme";
+    } else if (!darkTheme && !iconOnly) {
+      return "pill";
+    } else if (!darkTheme && iconOnly) {
+      return "iconOnly-pill";
+    }
+  };
 </script>
 
 <style>
@@ -30,6 +42,9 @@
   }
   .pill:hover {
     box-shadow: 4px 6px 0px !important;
+  }
+  .pill-darkTheme:hover {
+    box-shadow: 4px 6px 0px hsl(0, 0%, 20%) !important;
   }
   .name {
     margin-left: 0.3em;
@@ -52,7 +67,9 @@
   .iconOnly-pill:hover {
     box-shadow: 4px 6px 0px !important;
   }
-
+  .iconOnly-darkTheme:hover {
+    box-shadow: 4px 6px 0px hsl(0, 0%, 20%) !important;
+  }
   .showName {
     padding: 0.3em;
     font-size: 0.8em;
@@ -70,7 +87,7 @@
       showName = !showName;
     }
   }}
-  class={iconOnly ? 'iconOnly-pill' : 'pill'}
+  class={getClasses(darkTheme, iconOnly)}
   class:darkTheme
   class:iconOnly
   class:showName
