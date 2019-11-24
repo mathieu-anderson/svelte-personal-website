@@ -263,7 +263,7 @@
   .darkTheme-button {
     background: transparent;
     cursor: pointer;
-    border: 2px solid #333;
+    border: 0px;
     font-size: 0.6em;
     color: transparent;
     height: 1.3em;
@@ -273,7 +273,7 @@
   }
 
   .darkTheme-button:hover {
-    box-shadow: 4px 6px 0px #333;
+    transform: scale(1.05);
   }
 
   .darkTheme-button-light-color {
@@ -548,7 +548,8 @@
           <div class="show-details-button-container">
             <button
               on:click={() => (showAllPillInfo = !showAllPillInfo)}
-              class="show-details-button">
+              class="show-details-button"
+              aria-label="Show all tech details">
               {showAllPillInfo ? 'Hide all details' : 'Show all details'}
             </button>
           </div>
