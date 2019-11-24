@@ -13,7 +13,7 @@
   }
   svg:hover {
     transition: 300ms;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   .darkTheme > a > svg {
     fill: gainsboro;
