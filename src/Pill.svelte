@@ -31,6 +31,9 @@
 </script>
 
 <style>
+  div {
+    transition: 200ms;
+  }
   .pill {
     padding: 0.3em;
     margin: 0.5em;
@@ -92,7 +95,8 @@
   class:iconOnly
   class:showName
   style="border: 2px solid hsl({boxColor}); background-color: hsl({backgroundColor});
-  color: hsl({fontColor}); box-shadow: 0px 0px 0px hsl({boxColor});"
+  color: hsl({fontColor}); box-shadow: 0px 0px 0px hsl({boxColor}); transition:
+  200ms;"
   title={name}>
   <div style="height: 1em">
     {#if showName}
