@@ -822,6 +822,13 @@
               Types of TypeScript typings
             </a>
           </li>
+          <li class="list-item">
+            <a
+              title="A proposal for clearer code reviews"
+              href="https://medium.com/@syllaband/a-proposal-for-clearer-code-review-ac3ebbcc0ec6">
+              A proposal for a clearer code review process. With emojis!
+            </a>
+          </li>
         </ul>
         <br />
         <p>
