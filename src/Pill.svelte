@@ -31,9 +31,6 @@
 </script>
 
 <style>
-  div {
-    transition: 200ms;
-  }
   .pill {
     padding: 0.3em;
     margin: 0.5em;
