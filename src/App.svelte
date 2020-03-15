@@ -342,7 +342,7 @@
 {#if visible}
   <div class:darkTheme class="container">
     <header
-      transition:fly={{ x: 30, delay: 210 }}
+      transition:fly={{ x: 50, delay: 240 }}
       itemscope
       itemtype="http://schema.org/Person">
       <h1 itemprop="name">Mathieu Anderson is a web dev</h1>
@@ -361,7 +361,7 @@
     </header>
 
     <div class="section-1">
-      <section class:darkTheme transition:fly={{ x: 30, delay: 220 }}>
+      <section class:darkTheme transition:fly={{ x: 50, delay: 240 }}>
         <h3>What I do</h3>
         <p>
           I am a
@@ -385,7 +385,7 @@
         </p>
       </section>
 
-      <section class:darkTheme transition:fly={{ x: 30, delay: 300 }}>
+      <section class:darkTheme transition:fly={{ x: 50, delay: 240 }}>
         <h3>Where I did it</h3>
         <div class="job-box">
           <h4>
@@ -538,7 +538,7 @@
     </div>
 
     <div class="section-2">
-      <section class:darkTheme transition:fly={{ x: 30, delay: 270 }}>
+      <section class:darkTheme transition:fly={{ x: 50, delay: 240 }}>
         <h3>How I get it done</h3>
         <div class="show-details-button-container">
           <button
@@ -799,7 +799,7 @@
         </div>
       </section>
 
-      <section class:darkTheme transition:fly={{ x: 30, delay: 320 }}>
+      <section class:darkTheme transition:fly={{ x: 50, delay: 240 }}>
         <h3>On the side</h3>
         <p>
           I love sharing knowledge, insights and learning journeys through blog
