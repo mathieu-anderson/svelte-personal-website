@@ -812,14 +812,14 @@
               for your components"
               href="https://itnext.io/using-reacts-context-api-to-provide-a-localization-toolbox-for-your-components-48915f04bb54">
               Using React’s context API to provide a localization toolbox for
-              your components
+              your components.
             </a>
           </li>
           <li class="list-item">
             <a
               title="Types of TypeScript typings"
               href="https://medium.com/@syllaband/types-of-typescript-typings-303539f3a57b">
-              Types of TypeScript typings
+              Types of TypeScript typings: a beginner's guide to types, interfaces, composition.
             </a>
           </li>
           <li class="list-item">
@@ -827,6 +827,13 @@
               title="A proposal for clearer code reviews"
               href="https://medium.com/@syllaband/a-proposal-for-clearer-code-review-ac3ebbcc0ec6">
               A proposal for a clearer code review process. With emojis!
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              title="Theming Ant Design : a detailed step by step basic guide"
+              href="https://medium.com/@syllaband/theming-ant-design-a-detailed-step-by-step-basic-guide-d060bef34ec4">
+              Theming Ant Design : a detailed step by step basic guide. Actual working code to take example from.
             </a>
           </li>
         </ul>
