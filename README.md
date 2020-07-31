@@ -1,8 +1,12 @@
-# svelte-personal-website
+# svelte-personal-website (deprecated)
 
 A personal website with Svelte
 
-[matand.dev](https://matand.dev/)
+[old-svelte-version-of-website](https://old-svelte-version-of-website.netlify.app/)
+
+This website was remastered with Gastby! 
+- [repo](https://github.com/mathieu-anderson/gatsby-personal-website)
+- (live website)[https://matand.dev/]
 
 # Why Svelte ?
 
